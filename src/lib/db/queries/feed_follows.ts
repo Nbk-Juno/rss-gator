@@ -44,3 +44,26 @@ export async function getFeedFollowsForUser(userId: string) {
 
   return result;
 }
+
+export async function deleteFeedFollowByUserAndUrl(
+  userId: string,
+  feedUrl: string
+) {
+  const [feed] = await db
+    .select()
+    .from(schema.feeds)
+    .where(eq(schema.feeds.url, feedUrl));
+
+  if (!feed) {
+    throw new Error(`Feed with URL ${feedUrl} not found`);
+  }
+
+  await db
+    .delete(schema.feedFollows)
+    .where(
+      and(
+        eq(schema.feedFollows.userId, userId),
+        eq(schema.feedFollows.feedId, feed.id)
+      )
+    );
+}
