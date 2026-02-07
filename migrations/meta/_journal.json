@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1770358230899,
+      "tag": "0000_hot_forge",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1770442722724,
+      "tag": "0001_calm_norrin_radd",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1770444118635,
+      "tag": "0002_nosy_vampiro",
+      "breakpoints": true
+    }
+  ]
+}

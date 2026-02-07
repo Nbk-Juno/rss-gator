@@ -1,0 +1,8 @@
+{
+  "schema": "./src/schema.ts",
+  "out": "./migrations",
+  "dialect": "postgresql",
+  "dbCredentials": {
+    "url": "postgres://dopli:@localhost:5432/gator?sslmode=disable"
+  }
+}
